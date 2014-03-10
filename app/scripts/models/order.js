@@ -3,5 +3,6 @@ App.Order = DS.Model.extend({
   customername: DS.attr('string'),
   email: DS.attr('string'),
   transaction: DS.attr('string'),
-  status: DS.arrt('string')
+  // transaction will be separate model later and has many
+  status: DS.attr('string')
 })
