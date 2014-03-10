@@ -6,7 +6,7 @@
       {{# each }}
         <li>
           {{# link-to "product" this }}
-            {{ name }} <small> {{ price }}</small>
+            {{ name }} <small> {{ format-money price }}</small>
           {{/ link-to }}
         </li>
       {{/ each }}
