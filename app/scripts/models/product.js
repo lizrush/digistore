@@ -3,6 +3,7 @@ App.Product = DS.Model.extend({
   price: DS.attr("integer"),
   description: DS.attr("string"),
   image: DS.attr("string"),
+  avatar: DS.attr("string"),
   category: DS.attr("string")
 })
 
@@ -11,15 +12,15 @@ App.Product.FIXTURES = [
     id: 1,
     name: "Thing 1",
     price: "1000",
-    image: "http://upload.wikimedia.org/wikipedia/commons/b/b3/Chrysanthemum_sp.jpg",
+    image: "http://placekitten.com/800/600",
+    avatar: "http://placekitten.com/49/50",
     description: "This is the product description for thing 1.",
-    category: "a"
   }, {
     id: 2,
     name: "Thing 2",
     price: "2500",
-    image: "http://upload.wikimedia.org/wikipedia/commons/archive/f/f4/20070921095637%21Camellia_sasanqua1JAM343.jpg",
+    image: "http://placekitten.com/800/600",
+    avatar: "http://placekitten.com/50/50",
     description: "This is the product description for thing 2.",
-    category: "b"
   }
 ]
