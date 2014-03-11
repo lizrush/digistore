@@ -1,8 +1,11 @@
 <div class='container'>
-  <h1>Digistore</h1>
-  <p class='lead'>Buy some digital stuff here.</p>
+  <h1>kittyimages</h1>
+  <p class='lead'>Your one stop shop for images of cats.</p>
+  <button {{action 'openModal' 'myCart'}}>cart</button>
   <hr>
   {{outlet}}
+  {{outlet modal}}
+  <hr>
 
-  <div class='text-muted'><small>Foot</small></div>
+  <div class='text-muted'><small>Footer</small></div>
 </div>

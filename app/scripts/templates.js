@@ -1,13 +1,17 @@
 Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1;
+  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
 
-  data.buffer.push("<div class='container'>\n  <h1>Digistore</h1>\n  <p class='lead'>Buy some digital stuff here.</p>\n  <hr>\n  ");
+  data.buffer.push("<div class='container'>\n  <h1>kittyimages</h1>\n  <p class='lead'>Your one stop shop for images of cats.</p>\n  <button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "openModal", "myCart", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","STRING"],data:data})));
+  data.buffer.push(">cart</button>\n  <hr>\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n\n  <div class='text-muted'><small>Foot</small></div>\n</div>\n");
+  data.buffer.push("\n  ");
+  data.buffer.push(escapeExpression((helper = helpers.outlet || (depth0 && depth0.outlet),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "modal", options) : helperMissing.call(depth0, "outlet", "modal", options))));
+  data.buffer.push("\n  <hr>\n\n  <div class='text-muted'><small>Footer</small></div>\n</div>\n");
   return buffer;
   
 });

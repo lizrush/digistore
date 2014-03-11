@@ -4,7 +4,6 @@ App.Product = DS.Model.extend({
   description: DS.attr("string"),
   image: DS.attr("string"),
   avatar: DS.attr("string"),
-  category: DS.attr("string")
 })
 
 App.Product.FIXTURES = [
@@ -12,10 +11,12 @@ App.Product.FIXTURES = [
     id: 1,
     name: "Thing 1",
     price: "1000",
-    image: "http://placekitten.com/800/600",
+    image: "http://placekitten.com/759/600",
     avatar: "http://placekitten.com/49/50",
     description: "This is the product description for thing 1.",
-  }, {
+  },
+
+  {
     id: 2,
     name: "Thing 2",
     price: "2500",
