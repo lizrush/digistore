@@ -1,5 +1,5 @@
-App.CartModalController = Em.ObjectController.extend({
-  edit: function(record) {
+App.CartModalController = Ember.ObjectController.extend({
+  show: function(record) {
     record.on('didUpdate', this, function() {
       this.send('closeModal');
     });
@@ -7,7 +7,4 @@ App.CartModalController = Em.ObjectController.extend({
     this.set('model', record);
   },
 
-  save: function() {
-    this.get('model.transaction').commit();
-  }
 });

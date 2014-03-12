@@ -3,9 +3,9 @@ App.CartRoute = Ember.Route.extend({
     return this.store.find("cart", params.cart_id);
   },
 
-  events: {
-    edit: function(widget) {
-      this.controllerFor('cart.modal').edit(cart);
+  actions: {
+    show: function(cart) {
+      this.controllerFor('cart.modal').show(cart);
       this.send('openModal', 'cart.modal');
     }
   }

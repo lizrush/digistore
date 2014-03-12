@@ -1,5 +1,5 @@
 App.ApplicationRoute = Em.Route.extend({
-  events: {
+  actions: {
     openModal: function(modal) {
       this.render(modal, {
         into: 'application',
@@ -8,12 +8,10 @@ App.ApplicationRoute = Em.Route.extend({
     },
 
     closeModal: function() {
-      App.animateModalClose().then(function() {
-        this.render('empty', {
-          into: 'application',
-          outlet: 'modal'
-        });
-      }.bind(this));
+      return this.disconnectOutlet({
+        outlet: 'modal',
+        parentView: 'application'
+      });
     }
   }
 });

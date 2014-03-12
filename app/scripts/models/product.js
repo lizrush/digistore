@@ -25,3 +25,5 @@ App.Product.FIXTURES = [
     description: "This is the product description for thing 2.",
   }
 ]
+
+
