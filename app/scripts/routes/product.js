@@ -1,6 +1,6 @@
 App.ProductRoute = Ember.Route.extend({
   model: function (params) {
-    return this.store.find("product", params.product_id);
+    return this.store.find("product", params.product_id)
   },
 
   actions: {
@@ -15,11 +15,11 @@ App.ProductRoute = Ember.Route.extend({
 
       store.find('cart', 1).then(function(cart) {
         item.set('cart', cart);
-        debugger
-        this.items.pushObjects(item)
+        cart.get('items').pushObject(item)
       });
 
-      this.transitionTo('cart');
-    }
-  }
+        this.transitionTo('cart');
+
+    },
+  },
 });
