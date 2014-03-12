@@ -45,7 +45,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<div class=\"modal\">\n  <div class=\"modal-header\">\n   test\n  </div>\n\n    <div class=\"modal-body\">\n    body\n    </div>\n    <div class=\"modal-footer\">\n     footer\n    </div>\n\n</div>\n\nhelooooo\n");
+  data.buffer.push("<div class=\"modal\">\n  <div class=\"modal-header\">\n   test\n  </div>\n\n    <div class=\"modal-body\">\n    body\n    </div>\n    <div class=\"modal-footer\">\n     footer\n    </div>\n\n</div>\n\nhellooooo\n");
   
 });
 
