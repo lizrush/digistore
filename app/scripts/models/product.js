@@ -23,6 +23,15 @@ App.Product.FIXTURES = [
     image: "http://placekitten.com/800/600",
     avatar: "http://placekitten.com/50/50",
     description: "This is the product description for thing 2.",
+  },
+
+  {
+    id: 3,
+    name: "Thing 3",
+    price: "200",
+    image: "http://placekitten.com/801/600",
+    avatar: "http://placekitten.com/51/50",
+    description: "This is the product description for thing 3.",
   }
 ]
 
