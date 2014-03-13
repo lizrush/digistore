@@ -2,10 +2,10 @@
 
 <div class='row'>
   <div class='col-lg-2'>
-    <button {{action "show" this}}>panic</button>
+    <button {{action "show" this}} class="btn btn-danger">panic</button>
 
    <div>
-  <table>
+  <table class="table table-hover">
     <thead>
       <th>Product</th>
       <th></th>
@@ -16,17 +16,20 @@
     <tbody>
     {{# each items}}
       <tr>
-        <td>{{ this.product.name }}</td>
-        <td><button {{action "deleteItem" this}}> remove from cart </button></td>
+        <td>{{# link-to "product" this.product }}<img {{ bind-attr src=this.product.avatar }}>
+        <br>{{ this.product.name }}{{/ link-to }}</td>
+        <td></td>
         <td>{{ input type="number" value=quantity min=1 }}</td>
         <td>{{ format-money this.currentprice }}</td>
         <td>{{ format-money this.subtotal }}</td>
+        <td><button {{action "deleteItem" this}} class="btn btn-warning"> remove from cart </button></td>
       </tr>
       {{/ each}}
       <tr>
+        <td></td>
+        <td></td>
+        <td></td>
         <td><strong>Total</strong></td>
-        <td></td>
-        <td></td>
         <td> {{ format-money total }} </td>
       </tr>
     </tbody>

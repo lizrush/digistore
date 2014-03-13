@@ -1,7 +1,7 @@
 Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
@@ -9,15 +9,13 @@ function program1(depth0,data) {
   data.buffer.push(" Cart ");
   }
 
-  data.buffer.push("<div class='container'>\n  <nav class=\"navbar navbar-default\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/\"><img src=\"/images/kittyimages-500.png\" alt=\"kitty images\"></a>\n      <p class='lead'>Your one stop shop for images of cats.</p>\n    </div>\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li> ");
+  data.buffer.push("<div class='container'>\n  <nav class=\"navbar navbar-default\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/\"><img src=\"/images/kittyimages-25.png\" alt=\"kitty images\"></a><br>\n      <p class='lead'>Your one stop shop for images of cats.</p>\n    </div>\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li> ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "cart", options) : helperMissing.call(depth0, "link-to", "cart", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push(" </li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n\n\n\n\n  <hr>\n\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n\n  ");
-  data.buffer.push(escapeExpression((helper = helpers.outlet || (depth0 && depth0.outlet),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "modal", options) : helperMissing.call(depth0, "outlet", "modal", options))));
-  data.buffer.push("\n\n\n  <hr>\n\n  <div class='text-muted'><small>Footer</small></div>\n</div>\n\n\n\n");
+  data.buffer.push("\n\n\n\n  <hr>\n\n  <div class='text-muted'><small>Footer</small></div>\n</div>\n\n\n\n");
   return buffer;
   
 });
@@ -25,17 +23,15 @@ function program1(depth0,data) {
 Ember.TEMPLATES["cart"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
   var buffer = '', stack1, helper, options;
   data.buffer.push("\n      <tr>\n        <td>");
-  stack1 = helpers._triageMustache.call(depth0, "product.name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "product", "product", options) : helperMissing.call(depth0, "link-to", "product", "product", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n        <td><button ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "deleteItem", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push("> remove from cart </button></td>\n        <td>");
+  data.buffer.push("</td>\n        <td></td>\n        <td>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("number"),
     'value': ("quantity"),
@@ -45,16 +41,30 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "currentprice", options) : helperMissing.call(depth0, "format-money", "currentprice", options))));
   data.buffer.push("</td>\n        <td>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "format-money", "subtotal", options))));
-  data.buffer.push("</td>\n      </tr>\n      ");
+  data.buffer.push("</td>\n        <td><button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "deleteItem", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(" class=\"btn btn-warning\"> remove from cart </button></td>\n      </tr>\n      ");
+  return buffer;
+  }
+function program2(depth0,data) {
+  
+  var buffer = '', stack1;
+  data.buffer.push("<img ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'src': ("product.avatar")
+  },hashTypes:{'src': "ID"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push(">\n        <br>");
+  stack1 = helpers._triageMustache.call(depth0, "product.name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   return buffer;
   }
 
   data.buffer.push("<h1>Your Cart</h1>\n\n<div class='row'>\n  <div class='col-lg-2'>\n    <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "show", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">panic</button>\n\n   <div>\n  <table>\n    <thead>\n      <th>Product</th>\n      <th></th>\n      <th>Quantity</th>\n      <th>Price</th>\n      <th>Subtotal</th>\n    </thead>\n    <tbody>\n    ");
+  data.buffer.push(" class=\"btn btn-danger\">panic</button>\n\n   <div>\n  <table class=\"table table-hover\">\n    <thead>\n      <th>Product</th>\n      <th></th>\n      <th>Quantity</th>\n      <th>Price</th>\n      <th>Subtotal</th>\n    </thead>\n    <tbody>\n    ");
   stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      <tr>\n        <td><strong>Total</strong></td>\n        <td></td>\n        <td></td>\n        <td> ");
+  data.buffer.push("\n      <tr>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td><strong>Total</strong></td>\n        <td> ");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "format-money", "total", options))));
   data.buffer.push(" </td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n");
   return buffer;
