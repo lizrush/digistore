@@ -3,8 +3,8 @@
 <div class='row'>
   <div class='col-lg-2'>
     <button {{action "show" this}} class="btn btn-danger">panic</button>
+   </div>
 
-   <div>
   <table class="table table-hover">
     <thead>
       <th>Product</th>
@@ -29,8 +29,9 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><strong>Total</strong></td>
-        <td> {{ format-money total }} </td>
+        <td><strong>Total:</strong></td>
+        <td><strong>{{ format-money total }} </strong></td>
+        <td><button class="btn btn-primary">Checkout </button></td>
       </tr>
     </tbody>
   </table>
