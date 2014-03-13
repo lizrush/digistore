@@ -9,7 +9,7 @@ App.ProductRoute = Ember.Route.extend({
       store.find('cart', 1).then(function(cart) {
         var item = store.createRecord('item', {
           quantity: 1,
-          price: product.get('currentprice'),
+          currentprice: product.get('price'),
           product: product,
           cart: cart
         });
@@ -20,10 +20,6 @@ App.ProductRoute = Ember.Route.extend({
       });
       this.transitionTo('cart')
     }
-  },
+  }
 
-  // setupController: function(controller, model) {
-  //   this.controllerFor('cart').set('model', this.store.find('cart', 1));
-  //   controller.set('model', model);
-  // }
 });
