@@ -137,12 +137,14 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'src': ("image")
   },hashTypes:{'src': "ID"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class='thumbnail col-lg-12' />\n  </div>\n  <div class='col-lg-4'>\n    ");
+  data.buffer.push(" class='thumbnail col-lg-10' />\n  </div>\n  <div class='col-lg-4'>\n    <table>\n    <tbody>\n    <tr>\n      <td colspan=\"2\">\n        ");
   stack1 = helpers._triageMustache.call(depth0, "description", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </div>\n   <button ");
+  data.buffer.push("\n      </td>\n    </tr>\n    <tr><td colspan=\"2\"><hr></td></tr>\n    <tr>\n      <td>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "price", options) : helperMissing.call(depth0, "format-money", "price", options))));
+  data.buffer.push("\n      </td>\n      <td>\n        <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addToCart", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Add to Cart</button>\n</div>\n");
+  data.buffer.push(" class=\"btn btn-primary\">Add to Cart</button>\n      </td>\n    </tr>\n  </div>\n</div>\n");
   return buffer;
   
 });
