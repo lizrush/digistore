@@ -11,6 +11,11 @@ App.CartRoute = Ember.Route.extend({
         });
         item.destroyRecord();
       });
-    }
+    };
+
+    checkout: function(cart){
+
+    };
   }
+
 });

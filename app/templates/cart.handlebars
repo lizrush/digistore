@@ -31,7 +31,7 @@
         <td></td>
         <td><strong>Total:</strong></td>
         <td><strong>{{ format-money total }} </strong></td>
-        <td><button class="btn btn-primary">Checkout </button></td>
+        <td><button class="btn btn-primary" {{ action 'checkout' this }}>Checkout </button></td>
       </tr>
     </tbody>
   </table>
