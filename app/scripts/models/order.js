@@ -9,8 +9,8 @@ App.Order.FIXTURES = [
   {
     id: 1,
     cart: 1,
-    customer_name: "Ada Lovelace",
-    email: 'adarocks@lovelace.com',
+    customer_name: "Liz Rush",
+    email: 'liz.m.rush@gmail.com',
     status: 'pending',
   }
 ]
