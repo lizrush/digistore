@@ -83,10 +83,10 @@ function program6(depth0,data) {
     'value': ("email"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"creditcardnumber\">Credit Card Number</label>\n    ");
+  data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"ccnumber\">Credit Card Number</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("creditcardnumber"),
+    'value': ("ccnumber"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"CCV\">CCV</label>\n    ");
@@ -95,10 +95,10 @@ function program6(depth0,data) {
     'value': ("ccv"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"expirationdate\">Exp. Date</label>\n    ");
+  data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"expdate\">Exp. Date</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("expirationdate"),
+    'value': ("expdate"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"zipcode\">Zip Code</label>\n    ");
