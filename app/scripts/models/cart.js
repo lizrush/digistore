@@ -15,7 +15,7 @@ App.Cart = DS.Model.extend({
 
 App.Cart.FIXTURES = [
   {
-    id: 1,
+    id: "fixture-0",
     items: [1, 2],
     order: 1
   },
