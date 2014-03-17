@@ -12,6 +12,7 @@ App.Cart = DS.Model.extend({
   }.property('items.@each.subtotal')
 });
 
+// var CartAdapter = DS.LSAdapter.extend({});
 
 App.Cart.FIXTURES = [
   {
