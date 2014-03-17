@@ -74,42 +74,42 @@ function program6(depth0,data) {
   data.buffer.push("\n  <div class='form-group'>\n    <label for=\"name\">Name</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("name"),
+    'value': ("proxy.name"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n  <div class='form-group'>\n    <label for=\"email\">Email</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("email"),
+    'value': ("proxy.email"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"ccnumber\">Credit Card Number</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("ccnumber"),
+    'value': ("proxy.ccnumber"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"CCV\">CCV</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("ccv"),
+    'value': ("proxy.ccv"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"expdate\">Exp. Date</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("expdate"),
+    'value': ("proxy.expdate"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <div class='form-group'>\n    <label for=\"zipcode\">Zip Code</label>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("text"),
-    'value': ("zipcode"),
+    'value': ("proxy.zipcode"),
     'class': ("form-control")
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n  </div>\n\n  <button class='btn btn-success' ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "submitorder", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Submit Order</button>\n\n");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "submitorder", "proxy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(">Purchase</button>\n\n");
   return buffer;
   }
 
@@ -118,9 +118,9 @@ function program6(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      <tr>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td><strong>Total:</strong></td>\n        <td><strong>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "format-money", "total", options))));
-  data.buffer.push(" </strong></td>\n        <td><button class=\"btn btn-primary\" ");
+  data.buffer.push(" </strong></td>\n        <td><!-- <button class=\"btn btn-primary\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Checkout </button></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n");
+  data.buffer.push(">Checkout </button> --></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n");
   stack1 = helpers.unless.call(depth0, "checkout", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n");

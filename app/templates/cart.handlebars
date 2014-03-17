@@ -28,7 +28,7 @@
         <td></td>
         <td><strong>Total:</strong></td>
         <td><strong>{{ format-money total }} </strong></td>
-        <td><button class="btn btn-primary" {{ action 'checkout' this }}>Checkout </button></td>
+        <td><!-- <button class="btn btn-primary" {{ action 'checkout' this }}>Checkout </button> --></td>
       </tr>
     </tbody>
   </table>
@@ -40,33 +40,33 @@
 {{else }}
   <div class='form-group'>
     <label for="name">Name</label>
-    {{input type='text' value=name class='form-control'}}
+    {{input type='text' value=proxy.name class='form-control'}}
   </div>
   <div class='form-group'>
     <label for="email">Email</label>
-    {{input type='text' value=email class='form-control'}}
+    {{input type='text' value=proxy.email class='form-control'}}
   </div>
 
   <div class='form-group'>
     <label for="ccnumber">Credit Card Number</label>
-    {{input type='text' value=ccnumber class='form-control'}}
+    {{input type='text' value=proxy.ccnumber class='form-control'}}
   </div>
 
   <div class='form-group'>
     <label for="CCV">CCV</label>
-    {{input type='text' value=ccv class='form-control'}}
+    {{input type='text' value=proxy.ccv class='form-control'}}
   </div>
 
   <div class='form-group'>
     <label for="expdate">Exp. Date</label>
-    {{input type='text' value=expdate class='form-control'}}
+    {{input type='text' value=proxy.expdate class='form-control'}}
   </div>
 
   <div class='form-group'>
     <label for="zipcode">Zip Code</label>
-    {{input type='text' value=zipcode class='form-control'}}
+    {{input type='text' value=proxy.zipcode class='form-control'}}
   </div>
 
-  <button class='btn btn-success' {{action "submitorder" this}}>Submit Order</button>
+  <button class='btn btn-success' {{action "submitorder" proxy }}>Purchase</button>
 
 {{/unless}}

@@ -3,6 +3,7 @@ App.CartRoute = Ember.Route.extend({
     return this.store.find("cart", 1);
   },
 
+
   actions: {
     deleteItem: function(item){
       this.store.find('cart', 1).then(function(cart){
@@ -11,6 +12,21 @@ App.CartRoute = Ember.Route.extend({
         });
         item.destroyRecord();
       });
+    },
+
+    submitorder: function(proxy){
+      var order = this.store.createRecord('order', proxy);
+      var self = this;
+      order.save().then(
+        function (order) {
+          alert('itworked')
+          self.transitionTo('order', order.id);
+        },
+        function (error) {
+          order.deleteRecord();
+          alert(error)
+        }
+      )
     }
   }
 
