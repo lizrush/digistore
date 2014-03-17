@@ -1,5 +1,5 @@
 App.OrdersRoute = Ember.Route.extend({
   model: function () {
-    return this.store.find("order");
+    return this.store.find('orders');
   }
 })

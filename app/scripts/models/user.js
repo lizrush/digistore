@@ -8,7 +8,7 @@ App.User = DS.Model.extend({
   admin: DS.attr('boolean')
 });
 
-App.Order.FIXTURES = [
+App.User.FIXTURES = [
   {
     id: 1,
     customer_name: "Liz Rush",
