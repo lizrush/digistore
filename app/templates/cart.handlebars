@@ -1,9 +1,6 @@
 <h1>Your Cart</h1>
 
 <div class='row'>
-  <div class='col-lg-2'>
-    <button {{action "show" this}} class="btn btn-danger">panic</button>
-   </div>
 
   <table class="table table-hover">
     <thead>
@@ -36,3 +33,40 @@
     </tbody>
   </table>
 </div>
+
+{{# unless checkout }}
+  <button class="btn btn-success" {{ action 'checkout' this }}> Checkout </button>
+
+{{else }}
+  <div class='form-group'>
+    <label for="name">Name</label>
+    {{input type='text' value=name class='form-control'}}
+  </div>
+  <div class='form-group'>
+    <label for="email">Email</label>
+    {{input type='text' value=email class='form-control'}}
+  </div>
+
+  <div class='form-group'>
+    <label for="creditcardnumber">Credit Card Number</label>
+    {{input type='text' value=creditcardnumber class='form-control'}}
+  </div>
+
+  <div class='form-group'>
+    <label for="CCV">CCV</label>
+    {{input type='text' value=ccv class='form-control'}}
+  </div>
+
+  <div class='form-group'>
+    <label for="expirationdate">Exp. Date</label>
+    {{input type='text' value=expirationdate class='form-control'}}
+  </div>
+
+  <div class='form-group'>
+    <label for="zipcode">Zip Code</label>
+    {{input type='text' value=zipcode class='form-control'}}
+  </div>
+
+  <button class='btn btn-success' {{action "submitorder" this}}>Submit Order</button>
+
+{{/unless}}
