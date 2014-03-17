@@ -4,5 +4,9 @@ App.ApplicationRoute = Em.Route.extend({
       var cart = this.store.createRecord('cart')
       localStorage.cartId = cart.get('id')
     }
+  },
+
+  model: function () {
+    return this.store.find('cart', localStorage.cartId)
   }
 });
