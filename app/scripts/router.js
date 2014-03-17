@@ -7,4 +7,7 @@ App.Router.map(function(){
   this.resource('orders', function(){
     this.resource('order', { path: ':order_id' });
   });
+  this.resource('users', function(){
+    this.resource('user', { path: ':user_id' });
+  });
 });

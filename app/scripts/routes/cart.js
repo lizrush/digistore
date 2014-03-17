@@ -19,11 +19,11 @@ App.CartRoute = Ember.Route.extend({
       var order = this.store.createRecord('order', proxy);
       var self = this;
       order.save().then(
-        function (order) {
+        function (order){
           alert('itworked')
           self.transitionTo('order', order.id);
         },
-        function (error) {
+        function (error){
           order.deleteRecord();
           alert(error)
         }
