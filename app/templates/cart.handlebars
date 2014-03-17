@@ -37,7 +37,7 @@
   </div>
   <div class='col-md-6'>
 
-    {{else }}
+{{else }}
       <div class='form-group'>
         <label for="name">Name</label>
         {{input type='text' value=proxy.name class='form-control'}}
@@ -69,6 +69,7 @@
 
       <button class='btn btn-success' {{action "submitorder" proxy }}>Purchase</button>
 
-    {{/unless}}
+
+{{/unless}}
   </div>
 </div>

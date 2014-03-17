@@ -64,7 +64,7 @@ function program4(depth0,data) {
   var buffer = '';
   data.buffer.push("\n        <td><button class=\"btn btn-primary\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Checkout </button></td>\n      </tr>\n    </tbody>\n  </table>\n  </div>\n  <div class='col-md-6'>\n\n    ");
+  data.buffer.push(">Checkout </button></td>\n      </tr>\n    </tbody>\n  </table>\n  </div>\n  <div class='col-md-6'>\n\n");
   return buffer;
   }
 
@@ -109,7 +109,7 @@ function program6(depth0,data) {
   },hashTypes:{'type': "STRING",'value': "ID",'class': "STRING"},hashContexts:{'type': depth0,'value': depth0,'class': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("\n      </div>\n\n      <button class='btn btn-success' ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submitorder", "proxy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Purchase</button>\n\n    ");
+  data.buffer.push(">Purchase</button>\n\n\n");
   return buffer;
   }
 
@@ -254,7 +254,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "price", options) : helperMissing.call(depth0, "format-money", "price", options))));
   data.buffer.push("\n      </td>\n      <td>\n        <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addToCart", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(" class=\"btn btn-primary\">Add to Cart</button>\n      </td>\n    </tr>\n  </div>\n</div>\n");
+  data.buffer.push(" class=\"btn btn-primary\">Add to Cart</button>\n      </td>\n    </tr>\n    </tbody>\n    </table>\n  </div>\n</div>\n");
   return buffer;
   
 });
