@@ -8,26 +8,26 @@ App.User = DS.Model.extend({
   admin: DS.attr('boolean')
 });
 
-App.User.FIXTURES = [
-  {
-    id: 1,
-    customer_name: "Liz Rush",
-    email: 'liz.m.rush@gmail.com',
-    zipcode: '98112',
-    expdate: '',
-    ccv: '123',
-    ccnumber: '1234567890123456',
-    admin: true
-  },
+// App.User.FIXTURES = [
+//   {
+//     id: 1,
+//     customer_name: "Liz Rush",
+//     email: 'liz.m.rush@gmail.com',
+//     zipcode: '98112',
+//     expdate: '',
+//     ccv: '123',
+//     ccnumber: '1234567890123456',
+//     admin: true
+//   },
 
-  {
-    id: 2,
-    customer_name: "non-admin user",
-    email: 'liz.m.rush+admin@gmail.com',
-    zipcode: '98112',
-    expdate: '',
-    ccv: '123',
-    ccnumber: '1234567890123456',
-    admin: true
-  }
-]
+//   {
+//     id: 2,
+//     customer_name: "non-admin user",
+//     email: 'liz.m.rush+admin@gmail.com',
+//     zipcode: '98112',
+//     expdate: '',
+//     ccv: '123',
+//     ccnumber: '1234567890123456',
+//     admin: true
+//   }
+// ]

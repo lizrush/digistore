@@ -12,15 +12,14 @@ App.Cart = DS.Model.extend({
   }.property('items.@each.subtotal')
 });
 
-// var CartAdapter = DS.LSAdapter.extend({});
 
-App.Cart.FIXTURES = [
-  {
-    id: "fixture-0",
-    items: [1, 2],
-    order: 1
-  },
-]
+// App.Cart.FIXTURES = [
+//   {
+//     id: "fixture-0",
+//     items: [1, 2],
+//     order: 1
+//   },
+// ]
 
 
 

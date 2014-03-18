@@ -6,33 +6,33 @@ App.Product = DS.Model.extend({
   avatar: DS.attr("string"),
 })
 
-App.Product.FIXTURES = [
-  {
-    id: 1,
-    name: "Thing 1",
-    price: "1000",
-    image: "http://placekitten.com/759/600",
-    avatar: "http://placekitten.com/49/50",
-    description: "This is the product description for thing 1.",
-  },
+// App.Product.FIXTURES = [
+//   {
+//     id: 1,
+//     name: "Thing 1",
+//     price: "1000",
+//     image: "http://placekitten.com/759/600",
+//     avatar: "http://placekitten.com/49/50",
+//     description: "This is the product description for thing 1.",
+//   },
 
-  {
-    id: 2,
-    name: "Thing 2",
-    price: "2500",
-    image: "http://placekitten.com/800/600",
-    avatar: "http://placekitten.com/50/50",
-    description: "This is the product description for thing 2.",
-  },
+//   {
+//     id: 2,
+//     name: "Thing 2",
+//     price: "2500",
+//     image: "http://placekitten.com/800/600",
+//     avatar: "http://placekitten.com/50/50",
+//     description: "This is the product description for thing 2.",
+//   },
 
-  {
-    id: 3,
-    name: "Thing 3",
-    price: "200",
-    image: "http://placekitten.com/801/600",
-    avatar: "http://placekitten.com/51/50",
-    description: "This is the product description for thing 3.",
-  }
-]
+//   {
+//     id: 3,
+//     name: "Thing 3",
+//     price: "200",
+//     image: "http://placekitten.com/801/600",
+//     avatar: "http://placekitten.com/51/50",
+//     description: "This is the product description for thing 3.",
+//   }
+// ]
 
 

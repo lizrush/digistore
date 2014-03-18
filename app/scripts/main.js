@@ -5,7 +5,3 @@ App.Store = DS.Store.extend({
     host: "http://localhost:3000"
   })
 });
-
-App.Store2 = DS.LSAdapter.extend({
-  namespace: 'kittyimages'
-});
