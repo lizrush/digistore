@@ -15,7 +15,7 @@ function program3(depth0,data) {
   data.buffer.push(" Profile ");
   }
 
-  data.buffer.push("<div class='container'>\n  <nav class=\"navbar navbar-default\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/\"><img src=\"/images/kittyimages-50.png\" alt=\"kitty images\" id=\"header-image\"> <div class='lead'><small>Your one stop shop for images of cats.</small></div></a>\n    </div>\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li> ");
+  data.buffer.push("<div class='container'>\n  <nav class=\"navbar navbar-default\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/\"><img src=\"/images/kittyimages-50.png\" alt=\"kitty images\" id=\"header-image\"> <p class='lead'><small>Your one stop shop for images of cats.</small></p></a>\n    </div>\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li> ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "cart", options) : helperMissing.call(depth0, "link-to", "cart", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push(" </li>\n        <li> ");
@@ -40,7 +40,7 @@ function program1(depth0,data) {
   data.buffer.push("\n      <tr>\n        <td>");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "product", "product", options) : helperMissing.call(depth0, "link-to", "product", "product", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n        <td></td>\n        <td>");
+  data.buffer.push("</td>\n        <td>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("number"),
     'value': ("quantity"),
@@ -52,7 +52,7 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "format-money", "subtotal", options))));
   data.buffer.push("</td>\n        <td><button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "deleteItem", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(" class=\"btn btn-warning\"> remove from cart </button></td>\n      </tr>\n      ");
+  data.buffer.push(" class=\"btn btn-warning btn-xs\">Remove</button></td>\n      </tr>\n      ");
   return buffer;
   }
 function program2(depth0,data) {
@@ -73,7 +73,7 @@ function program4(depth0,data) {
   var buffer = '';
   data.buffer.push("\n        <td><button class=\"btn btn-primary\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Checkout </button></td>\n      </tr>\n    </tbody>\n  </table>\n  </div>\n  <div class='col-md-6'>\n\n");
+  data.buffer.push("> Checkout </button></td>\n      </tr>\n    </tbody>\n  </table>\n  </div>\n  <div class='col-md-6'>\n\n");
   return buffer;
   }
 
@@ -125,7 +125,7 @@ function program6(depth0,data) {
   data.buffer.push("<h1>Your Cart</h1>\n\n<div class='row'>\n  <div class='col-md-6'>\n\n  <table class=\"table table-hover\">\n    <thead>\n      <th>Product</th>\n      <th></th>\n      <th>Quantity</th>\n      <th>Price</th>\n      <th>Subtotal</th>\n    </thead>\n    <tbody>\n    ");
   stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      <tr>\n        <td></td>\n        <td></td>\n        <td></td>\n        <td><strong>Total:</strong></td>\n        <td><strong>");
+  data.buffer.push("\n      <tr>\n        <td></td>\n        <td></td>\n        <td><strong>Total:</strong></td>\n        <td><strong>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "format-money", "total", options))));
   data.buffer.push(" </strong></td>\n");
   stack1 = helpers.unless.call(depth0, "checkout", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});

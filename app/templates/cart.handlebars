@@ -16,21 +16,19 @@
       <tr>
         <td>{{# link-to "product" this.product }}<img {{ bind-attr src=this.product.avatar }}>
         <br>{{ this.product.name }}{{/ link-to }}</td>
-        <td></td>
         <td>{{ input type="number" value=quantity min=1 }}</td>
         <td>{{ format-money this.currentprice }}</td>
         <td>{{ format-money this.subtotal }}</td>
-        <td><button {{action "deleteItem" this}} class="btn btn-warning"> remove from cart </button></td>
+        <td><button {{action "deleteItem" this}} class="btn btn-warning btn-xs">Remove</button></td>
       </tr>
       {{/ each}}
       <tr>
         <td></td>
         <td></td>
-        <td></td>
         <td><strong>Total:</strong></td>
         <td><strong>{{ format-money total }} </strong></td>
 {{# unless checkout }}
-        <td><button class="btn btn-primary" {{ action 'checkout' this }}>Checkout </button></td>
+        <td><button class="btn btn-primary" {{ action 'checkout' this }}> Checkout </button></td>
       </tr>
     </tbody>
   </table>
