@@ -178,7 +178,7 @@ function program2(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<div class='row'>\n  <div class='col-lg-2'>\n    <ul class='list-unstyled'>\n      ");
+  data.buffer.push("<div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n  <!-- Indicators -->\n  <ol class=\"carousel-indicators\">\n    <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n    <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n  </ol>\n\n  <!-- Wrapper for slides -->\n  <div class=\"carousel-inner\">\n    <div class=\"item active\">\n      <img src=\"...\" alt=\"...\">\n      <div class=\"carousel-caption\">\n        ...\n      </div>\n    </div>\n    ...\n  </div>\n\n  <!-- Controls -->\n  <a class=\"left carousel-control\" href=\"#carousel-example-generic\" data-slide=\"prev\">\n    <span class=\"glyphicon glyphicon-chevron-left\"></span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#carousel-example-generic\" data-slide=\"next\">\n    <span class=\"glyphicon glyphicon-chevron-right\"></span>\n  </a>\n</div>\n\n\n<div class='row'>\n  <div class='col-lg-2'>\n    <ul class='list-unstyled'>\n      ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    </ul>\n  </div>\n  <div class='col-lg-10'>\n    ");
