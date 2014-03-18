@@ -1,9 +1,10 @@
 #header-image {
-  display: inline-block;
+  display: inline;
   padding: 5px;
 }
 
 .lead {
+  display: inline;
   margin-bottom: 0px;
 }
 
