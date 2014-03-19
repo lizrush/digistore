@@ -108,7 +108,7 @@ function program1(depth0,data) {
     'type': ("number"),
     'value': ("quantity"),
     'min': (1),
-    'class': ("form-group col-lg-2"),
+    'class': ("form-group col-lg-4"),
     'id': ("quantity-table")
   },hashTypes:{'type': "STRING",'value': "ID",'min': "INTEGER",'class': "STRING",'id': "STRING"},hashContexts:{'type': depth0,'value': depth0,'min': depth0,'class': depth0,'id': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</td>\n        <td>");
