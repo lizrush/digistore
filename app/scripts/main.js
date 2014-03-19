@@ -5,3 +5,4 @@ App.Store = DS.Store.extend({
     host: "http://localhost:3000"
   })
 });
+

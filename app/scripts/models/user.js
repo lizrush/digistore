@@ -1,5 +1,5 @@
 App.User = DS.Model.extend({
-  customer_name: DS.attr('string'),
+  username: DS.attr('string'),
   email: DS.attr('string'),
   zipcode: DS.attr('string'),
   expdate: DS.attr('date'),
@@ -11,7 +11,7 @@ App.User = DS.Model.extend({
 // App.User.FIXTURES = [
 //   {
 //     id: 1,
-//     customer_name: "Liz Rush",
+//     username: "Liz Rush",
 //     email: 'liz.m.rush@gmail.com',
 //     zipcode: '98112',
 //     expdate: '',
@@ -22,7 +22,7 @@ App.User = DS.Model.extend({
 
 //   {
 //     id: 2,
-//     customer_name: "non-admin user",
+//     username: "non-admin user",
 //     email: 'liz.m.rush+admin@gmail.com',
 //     zipcode: '98112',
 //     expdate: '',

@@ -13,6 +13,11 @@ App.Cart = DS.Model.extend({
 });
 
 
+App.CartAdapter = DS.LSAdapter.extend({
+  namespace: 'kittyimages'
+})
+
+
 // App.Cart.FIXTURES = [
 //   {
 //     id: "fixture-0",
