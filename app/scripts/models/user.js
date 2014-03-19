@@ -28,6 +28,6 @@ App.User = DS.Model.extend({
 //     expdate: '',
 //     ccv: '123',
 //     ccnumber: '1234567890123456',
-//     admin: true
+//     admin: false
 //   }
 // ]
