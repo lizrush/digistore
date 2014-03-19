@@ -9,6 +9,6 @@ App.ApplicationRoute = Em.Route.extend({
   },
 
   model: function () {
-    return this.store.find('cart', localStorage.cartId);
+    return this.store.find('cart');
   }
 });
