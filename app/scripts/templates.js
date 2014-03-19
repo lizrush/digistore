@@ -378,7 +378,7 @@ function program2(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<div class='row'>\n  <div class='col-lg-2'>\n    <h4>All Products</h4>\n    <ul class='list-unstyled'>\n      ");
+  data.buffer.push("<div class='row'>\n  <div class='col-lg-2'>\n    <h4>More Cats:</h4>\n    <ul class='list-unstyled'>\n      ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    </ul>\n  </div>\n  <div class='col-lg-10'>\n    ");

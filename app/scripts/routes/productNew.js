@@ -1,4 +1,7 @@
 App.ProductNewRoute = Ember.Route.extend({
+  model: function (params) {
+    return {};
+  },
 
   actions: {
     createProduct: function (proxy) {
