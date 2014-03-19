@@ -2,7 +2,7 @@ App.Router.map(function(){
   this.route('home', { path: '/' });
 
   this.resource('cart', function() {
-    this.resource('items', { path: '/cart' });
+    this.resource('item', { path: '/eliz' });
   });
 
   this.resource('products', function () {

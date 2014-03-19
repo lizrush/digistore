@@ -6,13 +6,8 @@ App.CartRoute = Ember.Route.extend({
 
   actions: {
     deleteItem: function(item){
-      this.store.find('cart', localStorage.cartId).then(function(cart){
-        cart.get('items').then(function(items){
-          items.removeObject(item);
-        });
         item.destroyRecord();
-      });
-    },
+      },
 
     submitorder: function(proxy){
       var order = this.store.createRecord('order', proxy);
