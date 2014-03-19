@@ -13,18 +13,19 @@ App.Cart = DS.Model.extend({
 });
 
 
-App.CartAdapter = DS.LSAdapter.extend({
-  namespace: 'kittyimages'
-})
+// App.CartAdapter = DS.LSAdapter.extend({
+//   namespace: 'kittyimages'
+// })
 
+App.CartAdapter = DS.FixtureAdapter.extend();
 
-// App.Cart.FIXTURES = [
-//   {
-//     id: "fixture-0",
-//     items: [1, 2],
-//     order: 1
-//   },
-// ]
+App.Cart.FIXTURES = [
+  {
+    id: "fixture-0",
+    items: [1, 2],
+    order: 1
+  },
+]
 
 
 
