@@ -6,7 +6,6 @@ App.Item = DS.Model.extend({
   product: DS.belongsTo('product'),
   currentprice: DS.attr('number'),
   quantity: DS.attr('number'),
-  cart: DS.belongsTo('cart'),
   subtotal: function(){
     return this.get('quantity') * this.get('currentprice')
   }.property('quantity', 'currentprice')

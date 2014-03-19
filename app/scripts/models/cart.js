@@ -4,16 +4,21 @@ App.CartAdapter = DS.LSAdapter.extend({
 
 App.Cart = DS.Model.extend({
 
-  items: DS.hasMany('item'),
+// fix this
   total: function(){
-    var items = this.get('items');
+    var sum = 0
+   return this.store.find('item').then(function(items){
+
     var prices = items.map(function(item){
       return item.get('subtotal')
     });
+
     var sum = prices.reduce(function(previousValue, currentValue){
       return previousValue + currentValue
     }, 0);
     return sum
+    });
+   return sum
   }.property('items.@each.subtotal')
 });
 
