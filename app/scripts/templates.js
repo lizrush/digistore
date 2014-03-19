@@ -6,7 +6,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push(" Cart ");
+  data.buffer.push(" Cart <!-- <span class=\"glyphicon glyphicon-shopping-cart\"></span> --> ");
   }
 
 function program3(depth0,data) {
@@ -21,7 +21,7 @@ function program3(depth0,data) {
   data.buffer.push(" </li>\n        <li> ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "users", options) : helperMissing.call(depth0, "link-to", "users", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push(" </li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n\n\n\n  <hr>\n\n  ");
+  data.buffer.push(" </li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n\n\n  <hr>\n\n  <div class='text-muted'><small>Footer</small></div>\n</div>\n\n\n\n");
@@ -325,7 +325,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'type': ("number"),
     'value': ("price")
   },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push(" (in cents, please!)\n<br><br>\nProduct description: ");
+  data.buffer.push(" <small>(in cents)</small>\n<br><br>\nProduct description: ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
     'value': ("description"),
     'rows': (10),
