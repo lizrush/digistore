@@ -11,8 +11,8 @@
     <tbody>
     {{#each }}
       <tr>
-        <td>{{# link-to "product" product }}<img {{ bind-attr src=product.avatar }}>
-        <br>{{ product.name }}{{/ link-to }}</td>
+        <td>{{# link-to "product" product_id }}<img {{ bind-attr src=product_avatar }}>
+        <br>{{ product_name }}{{/ link-to }}</td>
         <td>{{ input type="number" value=quantity min=1 class="form-group col-lg-4 quantity-table"}}</td>
         <td>{{ format-money currentprice }}</td>
         <td>{{ format-money subtotal }}</td>

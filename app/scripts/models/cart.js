@@ -6,8 +6,8 @@ App.Cart = DS.Model.extend({
 
 // fix this
 //   total: function(){
+//     debugger
 //     var items = this.store.find('item').then(function(items){
-//       debugger
 //       var price = items.map(function(item){
 //           return item.get('subtotal')
 //         }
@@ -19,18 +19,3 @@ App.Cart = DS.Model.extend({
 //     }.property('items.@each.subtotal')
 });
 
-
-//     var sum = 0
-//     return this.store.find('item').then(function(items){
-//       var prices = items.map(function(item){
-//         return item.get('subtotal')
-//       });
-
-//     sum = prices.reduce(function(previousValue, currentValue){
-//       return previousValue + currentValue
-//     }, 0);
-//     return sum
-//     });
-//    return sum
-//   }.property('items.@each.subtotal')
-// });

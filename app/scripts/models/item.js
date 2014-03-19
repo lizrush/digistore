@@ -3,7 +3,9 @@ App.ItemAdapter = DS.LSAdapter.extend({
 });
 
 App.Item = DS.Model.extend({
-  product: DS.belongsTo('product'),
+  product_id: DS.attr('string'),
+  product_name: DS.attr('string'),
+  product_avatar: DS.attr('string'),
   currentprice: DS.attr('number'),
   quantity: DS.attr('number'),
   subtotal: function(){
