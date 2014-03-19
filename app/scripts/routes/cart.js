@@ -4,7 +4,6 @@ App.CartRoute = Ember.Route.extend({
     return this.modelFor('application');
   },
 
-
   actions: {
     deleteItem: function(item){
       this.store.find('cart', localStorage.cartId).then(function(cart){

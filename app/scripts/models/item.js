@@ -1,3 +1,7 @@
+App.ItemAdapter = DS.LSAdapter.extend({
+  namespace: 'kittyimages'
+});
+
 App.Item = DS.Model.extend({
   product: DS.belongsTo('product'),
   currentprice: DS.attr('number'),
