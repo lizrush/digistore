@@ -6,14 +6,18 @@ App.ItemRoute = Ember.Route.extend({
   actions: {
     deleteItem: function(item){
         item.destroyRecord();
-      }
+      },
+
+    acceptChanges: function(quantity){
+      item = this.store.find('item')
+      item.set('quantity', quantity)
+      item.save()
     },
 
     submitorder: function(proxy){
       var order = this.store.createRecord('order', proxy);
       var self = this;
-      order.save().then(
-        function (order){
+      order.save().then(function (order){
           alert('itworked')
           self.transitionTo('order', order.id);
         },
@@ -21,6 +25,7 @@ App.ItemRoute = Ember.Route.extend({
           order.deleteRecord();
           alert(error)
         }
-      )
+      );
     }
-})
+  }
+});

@@ -15,7 +15,6 @@ App.ProductRoute = Ember.Route.extend({
           item.incrementProperty('quantity');
           item.save();
         } else {
-          debugger
            var item = store.createRecord('item', {
                 quantity: 1,
                 currentprice: product.get('price'),
@@ -26,7 +25,6 @@ App.ProductRoute = Ember.Route.extend({
             item.save();
         }
       })
-
     this.transitionTo('item');
     }
   }
