@@ -1,8 +1,12 @@
+App.CartSerializer = DS.LSSerializer.extend();
+
 App.CartAdapter = DS.LSAdapter.extend({
   namespace: 'kittyimages'
 });
 
 App.Cart = DS.Model.extend({
+
+  items: DS.hasMany('item'),
 
 // fix this
 //   total: function(){

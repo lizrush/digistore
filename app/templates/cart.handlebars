@@ -1,3 +1,11 @@
 <h1>Your Cart</h1>
 
+products {{model}} {{items.length}}
+<ul>
+  {{#each items}}
+    <li>Product name: {{ product_name }}Product name: </li>
+  {{/each}}
+</ul>
+
+
 {{ outlet }}
