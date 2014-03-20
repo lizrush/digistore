@@ -5,9 +5,8 @@ App.ProductRoute = Ember.Route.extend({
 
   actions: {
     addToCart: function (product) {
-
-      this.store.find('item').then(function(items){;
-
+      var store = this.store;
+      this.store.find('item').then(function(items){
         return items.find(function(item){
           return item.get('product_id') === product.get('id')
         })
@@ -16,7 +15,8 @@ App.ProductRoute = Ember.Route.extend({
           item.incrementProperty('quantity');
           item.save();
         } else {
-           var item = this.store.createRecord('item', {
+          debugger
+           var item = store.createRecord('item', {
                 quantity: 1,
                 currentprice: product.get('price'),
                 product_name: product.get('name'),
@@ -27,7 +27,7 @@ App.ProductRoute = Ember.Route.extend({
         }
       })
 
-    this.transitionTo('cart');
+    this.transitionTo('item');
     }
   }
 
