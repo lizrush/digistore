@@ -372,40 +372,36 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<h1>\n  ");
+  data.buffer.push("<form class=\"form-horizontal\" role=\"form\">\n  <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Name:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'value': ("name")
   },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n  <small class='muted'>(price: ");
+  data.buffer.push("\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"inputPassword\" class=\"col-sm-2 control-label\">Price, in cents:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("number"),
     'value': ("price")
   },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push(")</small>\n</h1>\n\n<div class='row'>\n  <div class='col-lg-8'>\n        Image url: ");
+  data.buffer.push("\n    </div>\n  </div>\n   <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Image:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
     'value': ("image"),
     'rows': (1),
     'cols': (50)
   },hashTypes:{'value': "ID",'rows': "INTEGER",'cols': "INTEGER"},hashContexts:{'value': depth0,'rows': depth0,'cols': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    <br>\n      Avatar url: ");
+  data.buffer.push("\n    </div>\n  </div>\n   <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Thumbnail:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
     'value': ("avatar"),
     'rows': (1),
     'cols': (50)
   },hashTypes:{'value': "ID",'rows': "INTEGER",'cols': "INTEGER"},hashContexts:{'value': depth0,'rows': depth0,'cols': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    <img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("image")
-  },hashTypes:{'src': "ID"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class='thumbnail col-lg-10' />\n  </div>\n  <div class='col-lg-4'>\n    <table>\n    <tbody>\n    <tr>\n      <td colspan=\"2\">\n        ");
+  data.buffer.push("\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Description:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
     'value': ("description"),
     'rows': (10),
     'cols': (50)
   },hashTypes:{'value': "ID",'rows': "INTEGER",'cols': "INTEGER"},hashContexts:{'value': depth0,'rows': depth0,'cols': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n      </td>\n    </tr>\n    <tr><td colspan=\"2\"><hr></td></tr>\n    <tr>\n      <td>\n\n      </td>\n      <td>\n        <button ");
+  data.buffer.push("\n      <br>\n      <br>\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "createProduct", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(" class=\"btn btn-primary\">Save!</button>\n      </td>\n    </tr>\n    </tbody>\n    </table>\n  </div>\n</div>\n");
+  data.buffer.push(" class=\"btn btn-primary\">Save!</button>\n    </div>\n  </div>\n</form>\n");
   return buffer;
   
 });
