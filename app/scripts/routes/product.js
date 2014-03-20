@@ -5,9 +5,11 @@ App.ProductRoute = Ember.Route.extend({
 
   actions: {
     addToCart: function (product) {
-      this.store.get('item').then(function(item){
-        return item.find(function(item){
-          return item.get('item').get('id') === item.get('id')
+
+      this.store.find('item').then(function(items){;
+
+        return items.find(function(item){
+          return item.get('product_id') === product.get('id')
         })
       }).then(function(item){
         if (item){
@@ -28,5 +30,20 @@ App.ProductRoute = Ember.Route.extend({
     this.transitionTo('cart');
     }
   }
+
+  //  actions: {
+  //   addToCart: function (product) {
+  //     var item = this.store.createRecord('item', {
+  //       quantity: 1,
+  //       currentprice: product.get('price'),
+  //       product_name: product.get('name'),
+  //       product_avatar: product.get('avatar'),
+  //       product_id: product.get('id')
+  //     });
+  //     item.save();
+  //   this.transitionTo('cart');
+  //   }
+  // }
+
 
 });
