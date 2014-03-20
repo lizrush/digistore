@@ -9,7 +9,7 @@ App.ItemRoute = Ember.Route.extend({
       },
 
     acceptChanges: function(quantity){
-      item = this.store.find('item')
+      var item = this.store.find('item')
       item.set('quantity', quantity)
       item.save()
     },

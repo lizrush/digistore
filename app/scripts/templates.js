@@ -372,7 +372,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<form class=\"form-horizontal\" role=\"form\">\n  <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Name:</label>\n    <div class=\"col-sm-10\">\n      ");
+  data.buffer.push("<h3>New Product:</h3>\n<form class=\"form-horizontal\" role=\"form\">\n  <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Name:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'value': ("name")
   },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
@@ -381,13 +381,13 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
     'type': ("number"),
     'value': ("price")
   },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n    </div>\n  </div>\n   <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Image:</label>\n    <div class=\"col-sm-10\">\n      ");
+  data.buffer.push("\n    </div>\n  </div>\n   <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Image url:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
     'value': ("image"),
     'rows': (1),
     'cols': (50)
   },hashTypes:{'value': "ID",'rows': "INTEGER",'cols': "INTEGER"},hashContexts:{'value': depth0,'rows': depth0,'cols': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    </div>\n  </div>\n   <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Thumbnail:</label>\n    <div class=\"col-sm-10\">\n      ");
+  data.buffer.push("\n    </div>\n  </div>\n   <div class=\"form-group\">\n    <label class=\"col-sm-2 control-label\">Thumbnail url:</label>\n    <div class=\"col-sm-10\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
     'value': ("avatar"),
     'rows': (1),
