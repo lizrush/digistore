@@ -30,18 +30,17 @@ App.ItemRoute = Ember.Route.extend({
     submitorder: function(proxy){
        var self = this;
        // create all items in api
-       // var items = self.store.find('item').then(function(items){
-       //  // iterate over items and create record
-       //  self.store.createRecord('orderItem', items)
-       // })
-
-
+       var items = self.store.find('item').then(function(items){
+          items.forEach(function(item){
+            debugger
+           self.store.createRecord('orderItem', item.toJSON()).save();
+         })
+       });
 
        var order = this.store.createRecord('order', proxy);
 
       self.store.find('item').then(function(items){
         order.set('status', 'pending');
-        order.set('items', items);
         order.set('total', '10000');
         order.save().then(
           function(order){
@@ -50,7 +49,6 @@ App.ItemRoute = Ember.Route.extend({
           function(error){
             debugger
             console.log('it didnt work');
-            order.deleteRecord();
             alert(error.responseText)
           }
         );
