@@ -5,5 +5,6 @@ App.Order = DS.Model.extend({
   zipcode: DS.attr('string'),
   expdate: DS.attr('date'),
   ccv: DS.attr('string'),
-  ccnumber: DS.attr('string')
+  ccnumber: DS.attr('string'),
+  total: DS.attr('string')
 });
