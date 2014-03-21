@@ -29,8 +29,15 @@ App.ItemRoute = Ember.Route.extend({
 
     submitorder: function(proxy){
        var self = this;
+       // create all items in api
+       // var items = self.store.find('item').then(function(items){
+       //  // iterate over items and create record
+       //  self.store.createRecord('orderItem', items)
+       // })
+
+
+
        var order = this.store.createRecord('order', proxy);
-      debugger
 
       self.store.find('item').then(function(items){
         order.set('status', 'pending');
@@ -41,7 +48,8 @@ App.ItemRoute = Ember.Route.extend({
             self.transitionTo("order", order)
           },
           function(error){
-            console.log('OOPS');
+            debugger
+            console.log('it didnt work');
             order.deleteRecord();
             alert(error.responseText)
           }

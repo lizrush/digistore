@@ -3,7 +3,7 @@ App.Order = DS.Model.extend({
   email: DS.attr('string'),
   status: DS.attr('string'),
   zipcode: DS.attr('string'),
-  expdate: DS.attr('date'),
+  expdate: DS.attr('string'),
   ccv: DS.attr('string'),
   ccnumber: DS.attr('string'),
   total: DS.attr('string')
