@@ -18,6 +18,7 @@ App.ItemRoute = Ember.Route.extend({
         item.destroyRecord();
       },
 
+      // this does not work, get help
     acceptChanges: function(quantity){
       console.log(quantity)
       debugger
@@ -27,17 +28,25 @@ App.ItemRoute = Ember.Route.extend({
     },
 
     submitorder: function(proxy){
-      var order = this.store.createRecord('order', proxy);
-      var self = this;
-      order.save().then(function (order){
-          alert('itworked')
-          self.transitionTo('order', order.id);
-        },
-        function (error){
-          order.deleteRecord();
-          alert(error)
-        }
-      );
+       var self = this;
+       var order = this.store.createRecord('order', proxy);
+      debugger
+
+      self.store.find('item').then(function(items){
+        order.set('status', 'pending');
+        order.set('items', items);
+        order.set('total', '10000');
+        order.save().then(
+          function(order){
+            self.transitionTo("order", order)
+          },
+          function(error){
+            console.log('OOPS');
+            order.deleteRecord();
+            alert(error.responseText)
+          }
+        );
+      });
     }
   }
 });
