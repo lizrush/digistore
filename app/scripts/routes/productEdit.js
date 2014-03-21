@@ -5,7 +5,6 @@ App.ProductEditRoute = Ember.Route.extend({
 
   actions: {
     saveProduct: function (product) {
-      debugger;
       product.save();
       this.transitionTo('admin')
     }

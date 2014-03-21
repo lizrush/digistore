@@ -11,9 +11,13 @@
     <tbody>
     {{#each }}
       <tr>
-        <td>{{# link-to "product" product_id }}<img {{ bind-attr src=product_avatar }}>
+        <td>
+        {{# link-to "product" product_id }}<img {{ bind-attr src=product_avatar }}>
         <br>{{ product_name }}{{/ link-to }}</td>
-        <td>{{ input type="number" value=quantity min=1 class="form-group col-lg-4 quantity-table" focus-out="acceptChanges" insert-newline="acceptChanges"}}</td>
+        <td>{{ input type="number" value=quantity min=1 class="form-group col-lg-4 quantity-table" focus-out="acceptChanges" insert-newline="acceptChanges"}}
+        <!-- possible solution for on change event bound to data -->
+        {{view App.OutOfFocusInput value=quantity data-id=id }}
+        </td>
         <td>{{ format-money currentprice }}</td>
         <td>{{ format-money subtotal }}</td>
         <td><button {{action "deleteItem" this}} class="btn btn-warning btn-xs">Remove</button></td>

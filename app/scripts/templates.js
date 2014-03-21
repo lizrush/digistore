@@ -136,7 +136,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1, helper, options;
-  data.buffer.push("\n      <tr>\n        <td>");
+  data.buffer.push("\n      <tr>\n        <td>\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "product", "product_id", options) : helperMissing.call(depth0, "link-to", "product", "product_id", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</td>\n        <td>");
@@ -148,7 +148,12 @@ function program1(depth0,data) {
     'focus-out': ("acceptChanges"),
     'insert-newline': ("acceptChanges")
   },hashTypes:{'type': "STRING",'value': "ID",'min': "INTEGER",'class': "STRING",'focus-out': "STRING",'insert-newline': "STRING"},hashContexts:{'type': depth0,'value': depth0,'min': depth0,'class': depth0,'focus-out': depth0,'insert-newline': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</td>\n        <td>");
+  data.buffer.push("\n        <!-- possible solution for on change event bound to data -->\n        ");
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.OutOfFocusInput", {hash:{
+    'value': ("quantity"),
+    'data-id': ("id")
+  },hashTypes:{'value': "ID",'data-id': "ID"},hashContexts:{'value': depth0,'data-id': depth0},contexts:[depth0],types:["ID"],data:data})));
+  data.buffer.push("\n        </td>\n        <td>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "currentprice", options) : helperMissing.call(depth0, "format-money", "currentprice", options))));
   data.buffer.push("</td>\n        <td>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "format-money", "subtotal", options))));
