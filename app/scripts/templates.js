@@ -178,7 +178,7 @@ function program1(depth0,data) {
   
   var buffer = '', helper, options;
   data.buffer.push("\n            ");
-  data.buffer.push(escapeExpression((helper = helpers.render || (depth0 && depth0.render),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "item", "item", options) : helperMissing.call(depth0, "render", "item", "item", options))));
+  data.buffer.push(escapeExpression((helper = helpers.render || (depth0 && depth0.render),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "item", "", options) : helperMissing.call(depth0, "render", "item", "", options))));
   data.buffer.push("\n      ");
   return buffer;
   }

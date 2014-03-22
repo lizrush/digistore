@@ -1,27 +1,9 @@
-
-// update this to be items route
 App.ItemsRoute = Ember.Route.extend({
   model: function () {
     return this.store.find('item')
   },
 
   actions: {
-    deleteItem: function(item){
-        item.destroyRecord();
-      },
-
-      // this does not work, get help
-    acceptChanges: function(quantity){
-      console.log(quantity)
-      var id = $(event.currentTarget).data('id')
-      debugger
-      var item = this.store.find('item', id).then(function(item){
-        item.set('quantity', quantity)
-        item.save()
-      })
-
-    },
-
     submitorder: function(proxy){
        var self = this;
        // create all items in api
