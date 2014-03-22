@@ -1,4 +1,10 @@
 App.ItemsController = Ember.ArrayController.extend({
+   cartTotal: function() {
+    return this.get('content').reduce(function(total, item) {
+      return total + item.get('total');
+    }, 0);
+  }.property("content.@each.total"),
+
   proxy: {},
 
   actions: {
@@ -26,4 +32,3 @@ App.ItemsController = Ember.ArrayController.extend({
     }
   }
 })
-
