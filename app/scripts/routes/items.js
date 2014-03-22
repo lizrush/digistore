@@ -4,6 +4,10 @@ App.ItemsRoute = Ember.Route.extend({
   },
 
   actions: {
+    deleteItem: function(item){
+        item.destroyRecord();
+      },
+
     submitorder: function(proxy){
        var self = this;
        // create all items in api
