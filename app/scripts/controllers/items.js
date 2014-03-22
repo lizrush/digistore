@@ -1,4 +1,4 @@
-App.ItemController = Ember.ArrayController.extend({
+App.ItemsController = Ember.ArrayController.extend({
   proxy: {},
 
   actions: {

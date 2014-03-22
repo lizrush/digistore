@@ -1,70 +1,11 @@
-<div class='row'>
-  <div class='col-md-6'>
-  <table class="table table-hover">
-    <thead>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Subtotal</th>
-      <th></th>
-    </thead>
-    <tbody>
-    {{#each }}
       <tr>
         <td>
-        {{# link-to "product" product_id }}<img {{ bind-attr src=product_avatar }}>
+        {{# link-to "product" this.product_id }}<img {{ bind-attr src=this.product_avatar }}>
         <br>{{ product_name }}{{/ link-to }}</td>
         <td>{{ input type="number" value=quantity min=1 class="form-group col-lg-4 quantity-table" focus-out="acceptChanges" insert-newline="acceptChanges"}}
-        <!-- possible solution for on change event bound to data -->
-        {{view App.OutOfFocusInput value=quantity data-id=id }}
+
         </td>
         <td>{{ format-money currentprice }}</td>
         <td>{{ format-money subtotal }}</td>
         <td><button {{action "deleteItem" this}} class="btn btn-warning btn-xs">Remove</button></td>
       </tr>
-      {{/each}}
-      <tr>
-        <td></td>
-        <td></td>
-        <td><strong>Total:</strong></td>
-        <td><strong>{{ format-money total }} </strong></td>
-        <td><button class="btn btn-primary" {{ action 'checkout' this }}> Checkout </button></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-{{# if checkout }}
-  <div class='col-md-6'>
-    <div class='form-group'>
-      <label for="name">Name</label>
-      {{input type='text' value=proxy.customer_name class='form-control'}}
-    </div>
-    <div class='form-group'>
-      <label for="email">Email</label>
-      {{input type='text' value=proxy.email class='form-control'}}
-    </div>
-
-    <div class='form-group'>
-      <label for="ccnumber">Credit Card Number</label>
-      {{input type='text' value=proxy.ccnumber class='form-control'}}
-    </div>
-
-    <div class='form-group'>
-      <label for="CCV">CCV</label>
-      {{input type='text' value=proxy.ccv class='form-control'}}
-    </div>
-
-    <div class='form-group'>
-      <label for="expdate">Exp. Date</label>
-      {{input type='text' value=proxy.expdate class='form-control'}}
-    </div>
-
-    <div class='form-group'>
-      <label for="zipcode">Zip Code</label>
-      {{input type='text' value=proxy.zipcode class='form-control'}}
-    </div>
-    {{# link-to "home" class="btn btn-danger"}} Cancel {{/link-to}}
-    <button class='btn btn-success' {{ action "submitorder" proxy }}>Purchase</button>
-  </div>
-{{/if}}
-</div>

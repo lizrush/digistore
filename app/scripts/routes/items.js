@@ -1,7 +1,8 @@
-App.ItemRoute = Ember.Route.extend({
-  model: function (item) {
-    debugger
-    return this.store.find('item', item)
+
+// update this to be items route
+App.ItemsRoute = Ember.Route.extend({
+  model: function () {
+    return this.store.find('item')
   },
 
   actions: {

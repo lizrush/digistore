@@ -69,7 +69,7 @@ function program1(depth0,data) {
   }
 
   data.buffer.push("<div class='container'>\n  <nav class=\"navbar navbar-default\" role=\"navigation\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/\"><img src=\"/images/kittyimages-50.png\" alt=\"kitty images\" id=\"header-image\"> <p class='lead'><small>Your one stop shop for images of cats.</small></p></a>\n    </div>\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">\n        <li> ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "item", options) : helperMissing.call(depth0, "link-to", "item", options));
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "items", options) : helperMissing.call(depth0, "link-to", "items", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push(" </li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -135,35 +135,6 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = '', stack1, helper, options;
-  data.buffer.push("\n      <tr>\n        <td>\n        ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "product", "product_id", options) : helperMissing.call(depth0, "link-to", "product", "product_id", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</td>\n        <td>");
-  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("number"),
-    'value': ("quantity"),
-    'min': (1),
-    'class': ("form-group col-lg-4 quantity-table"),
-    'focus-out': ("acceptChanges"),
-    'insert-newline': ("acceptChanges")
-  },hashTypes:{'type': "STRING",'value': "ID",'min': "INTEGER",'class': "STRING",'focus-out': "STRING",'insert-newline': "STRING"},hashContexts:{'type': depth0,'value': depth0,'min': depth0,'class': depth0,'focus-out': depth0,'insert-newline': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n        <!-- possible solution for on change event bound to data -->\n        ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.OutOfFocusInput", {hash:{
-    'value': ("quantity"),
-    'data-id': ("id")
-  },hashTypes:{'value': "ID",'data-id': "ID"},hashContexts:{'value': depth0,'data-id': depth0},contexts:[depth0],types:["ID"],data:data})));
-  data.buffer.push("\n        </td>\n        <td>");
-  data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "currentprice", options) : helperMissing.call(depth0, "format-money", "currentprice", options))));
-  data.buffer.push("</td>\n        <td>");
-  data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "format-money", "subtotal", options))));
-  data.buffer.push("</td>\n        <td><button ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "deleteItem", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(" class=\"btn btn-warning btn-xs\">Remove</button></td>\n      </tr>\n      ");
-  return buffer;
-  }
-function program2(depth0,data) {
-  
   var buffer = '', stack1;
   data.buffer.push("<img ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
@@ -175,7 +146,44 @@ function program2(depth0,data) {
   return buffer;
   }
 
-function program4(depth0,data) {
+  data.buffer.push("      <tr>\n        <td>\n        ");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "product", "product_id", options) : helperMissing.call(depth0, "link-to", "product", "product_id", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</td>\n        <td>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("number"),
+    'value': ("quantity"),
+    'min': (1),
+    'class': ("form-group col-lg-4 quantity-table"),
+    'focus-out': ("acceptChanges"),
+    'insert-newline': ("acceptChanges")
+  },hashTypes:{'type': "STRING",'value': "ID",'min': "INTEGER",'class': "STRING",'focus-out': "STRING",'insert-newline': "STRING"},hashContexts:{'type': depth0,'value': depth0,'min': depth0,'class': depth0,'focus-out': depth0,'insert-newline': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("\n\n        </td>\n        <td>");
+  data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "currentprice", options) : helperMissing.call(depth0, "format-money", "currentprice", options))));
+  data.buffer.push("</td>\n        <td>");
+  data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "format-money", "subtotal", options))));
+  data.buffer.push("</td>\n        <td><button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "deleteItem", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(" class=\"btn btn-warning btn-xs\">Remove</button></td>\n      </tr>\n");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["items"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = '', helper, options;
+  data.buffer.push("\n            ");
+  data.buffer.push(escapeExpression((helper = helpers.render || (depth0 && depth0.render),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "item", "item", options) : helperMissing.call(depth0, "render", "item", "item", options))));
+  data.buffer.push("\n      ");
+  return buffer;
+  }
+
+function program3(depth0,data) {
   
   var buffer = '', stack1, helper, options;
   data.buffer.push("\n  <div class='col-md-6'>\n    <div class='form-group'>\n      <label for=\"name\">Name</label>\n      ");
@@ -217,28 +225,33 @@ function program4(depth0,data) {
   data.buffer.push("\n    </div>\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'class': ("btn btn-danger")
-  },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "home", options) : helperMissing.call(depth0, "link-to", "home", options));
+  },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "home", options) : helperMissing.call(depth0, "link-to", "home", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    <button class='btn btn-success' ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submitorder", "proxy", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push(">Purchase</button>\n  </div>\n");
   return buffer;
   }
-function program5(depth0,data) {
+function program4(depth0,data) {
   
   
   data.buffer.push(" Cancel ");
   }
 
-  data.buffer.push("<div class='row'>\n  <div class='col-md-6'>\n  <table class=\"table table-hover\">\n    <thead>\n      <th>Product</th>\n      <th>Quantity</th>\n      <th>Price</th>\n      <th>Subtotal</th>\n      <th></th>\n    </thead>\n    <tbody>\n    ");
+  stack1 = helpers._triageMustache.call(depth0, "model", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n");
+  stack1 = helpers._triageMustache.call(depth0, "controller", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n\n<div class='row'>\n  <div class='col-md-6'>\n    <table class=\"table table-hover\">\n      <thead>\n        <th>Product</th>\n        <th>Quantity</th>\n        <th>Price</th>\n        <th>Subtotal</th>\n        <th></th>\n      </thead>\n      <tbody>\n      ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      <tr>\n        <td></td>\n        <td></td>\n        <td><strong>Total:</strong></td>\n        <td><strong>");
+  data.buffer.push("\n        <tr>\n          <td></td>\n          <td></td>\n          <td><strong>Total:</strong></td>\n          <td><strong>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "format-money", "total", options))));
-  data.buffer.push(" </strong></td>\n        <td><button class=\"btn btn-primary\" ");
+  data.buffer.push(" </strong></td>\n          <td><button class=\"btn btn-primary\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push("> Checkout </button></td>\n      </tr>\n    </tbody>\n  </table>\n  </div>\n");
-  stack1 = helpers['if'].call(depth0, "checkout", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
+  data.buffer.push("> Checkout </button></td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n");
+  stack1 = helpers['if'].call(depth0, "checkout", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</div>\n");
   return buffer;
