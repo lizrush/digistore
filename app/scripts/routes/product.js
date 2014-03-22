@@ -25,7 +25,7 @@ App.ProductRoute = Ember.Route.extend({
             item.save();
         }
       })
-    this.transitionTo('item');
+    this.transitionTo('items');
     }
   }
 
