@@ -1,9 +1,9 @@
 App.ItemsController = Ember.ArrayController.extend({
-   cartTotal: function() {
-    return this.get('content').reduce(function(total, item) {
-      return total + item.get('total');
+  cartTotal: function() {
+    return this.get('content').reduce(function(subtotal, item) {
+      return subtotal + item.get('subtotal');
     }, 0);
-  }.property("content.@each.total"),
+  }.property("content.@each.subtotal"),
 
   proxy: {},
 
@@ -12,12 +12,9 @@ App.ItemsController = Ember.ArrayController.extend({
       this.set('checkout', true)
     },
 
-      // this does not work, get help
-    acceptChanges: function(quantity){
-      var self = this;
-      console.log(quantity)
-      var item = this.store.find('item', item).then(function(item){
-        debugger
+    applyChanges: function(quantity) {
+      debugger
+      this.get('model').save(function(item){
         item.set('quantity', quantity)
         item.save().then(
           function(order){
@@ -28,7 +25,7 @@ App.ItemsController = Ember.ArrayController.extend({
             alert(error.responseText)
           }
         );
-      })
+      });
     }
   }
 })
