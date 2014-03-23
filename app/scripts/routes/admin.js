@@ -5,7 +5,6 @@ App.AdminRoute = Ember.Route.extend({
 
   actions: {
     productDelete: function(product){
-      debugger
       product.deleteRecord();
       product.save();
     }
