@@ -1,36 +1,25 @@
-<div>
-  <h1>{{ customer_name }} <small>{{ email }}</small></h1>
-  <ul>
-    <li>Total: {{ format-currency total }}</li>
-    <li>Status: {{ status }}</li>
-    <li>credit card: {{ last-four credit_card }}</li>
-  </ul>
-  <h2>Cart Details</h2>
-  <table class='table table-hover'>
-    <thead>
-      <th>Product</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Subtotal</th>
-      <th></th>
-    </thead>
-    <tbody>
-      {{# each item }}
-        <tr>
-          <td>{{ product.name }}</td>
-          <td>{{ quantity }}</td>
-          <td>{{ format-currency this.current_price }}</td>
-          <td>{{ format-currency this.subtotal }}</td>
-          <td></td>
-        </tr>
-      {{/ each}}
-      <tr>
-        <td><strong>Total</strong></td>
-        <td></td>
-        <td></td>
-        <td> {{ format-currency total }} </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+<h1>Order {{ id }}</h1>
+<div class='row'>
+  <div class='col-lg-8'>
+    <table class='table table-hover'>
+      <thead>
+        <th>Customer</th>
+        <th>Email</th>
+        <th>Status</th>
+      </thead>
+      <tbody>
+          <tr>
+            <td>
+              {{ customer_name }}
+            </td>
+            <td>
+              {{ email }}
+            </td>
+            <td>
+              {{ status }}
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
