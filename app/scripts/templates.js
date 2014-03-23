@@ -323,10 +323,10 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1;
 
 
-  data.buffer.push("<h1>Order ");
+  data.buffer.push("<h1>Confirmation for your order:</h1>\n<div class='row'>\n  <div class='col-lg-8'>\n    <table class='table table-hover'>\n      <thead>\n        <th>Order Number</th>\n        <th>Customer</th>\n        <th>Email</th>\n        <th>Status</th>\n      </thead>\n      <tbody>\n          <tr>\n            <td>\n              ");
   stack1 = helpers._triageMustache.call(depth0, "id", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h1>\n<div class='row'>\n  <div class='col-lg-8'>\n    <table class='table table-hover'>\n      <thead>\n        <th>Customer</th>\n        <th>Email</th>\n        <th>Status</th>\n      </thead>\n      <tbody>\n          <tr>\n            <td>\n              ");
+  data.buffer.push("\n            </td>\n            <td>\n              ");
   stack1 = helpers._triageMustache.call(depth0, "customer_name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n            </td>\n            <td>\n              ");

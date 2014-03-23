@@ -27,8 +27,7 @@ App.ItemsRoute = Ember.Route.extend({
             self.transitionTo('order', order)
           },
           function(error){
-            console.log('it didnt work');
-            alert(error.responseText)
+            alert("There was a problem processing your order.")
           }
         );
       });
