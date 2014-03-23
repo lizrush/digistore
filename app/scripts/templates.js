@@ -145,8 +145,8 @@ function program1(depth0,data) {
     'value': ("quantity"),
     'min': (1),
     'class': ("form-group col-lg-4 quantity-table"),
-    'onchange': ("applyChanges")
-  },hashTypes:{'type': "STRING",'value': "ID",'min': "INTEGER",'class': "STRING",'onchange': "ID"},hashContexts:{'type': depth0,'value': depth0,'min': depth0,'class': depth0,'onchange': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'focus-out': ("applyChanges")
+  },hashTypes:{'type': "STRING",'value': "ID",'min': "INTEGER",'class': "STRING",'focus-out': "STRING"},hashContexts:{'type': depth0,'value': depth0,'min': depth0,'class': depth0,'focus-out': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</td>\n          <td>");
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "currentprice", options) : helperMissing.call(depth0, "format-money", "currentprice", options))));
   data.buffer.push("</td>\n          <td>");
