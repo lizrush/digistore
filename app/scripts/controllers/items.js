@@ -13,7 +13,6 @@ App.ItemsController = Ember.ArrayController.extend({
     },
 
     applyChanges: function(quantity) {
-      debugger
       this.get('model').save(function(item){
         item.set('quantity', quantity)
         item.save().then(
