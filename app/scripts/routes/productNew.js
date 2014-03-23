@@ -9,7 +9,7 @@ App.ProductNewRoute = Ember.Route.extend({
 
       var self = this
       newProduct.save().then(function () {
-          self.transitionTo('home');
+          self.transitionTo('admin');
         },
         function (error) {
           alert(error.responseText);
