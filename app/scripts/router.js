@@ -12,7 +12,8 @@ App.Router.map(function(){
   });
 
   this.resource("admin", function () {
-    this.resource("productEdit", { path: ":product_id"});
-    this.resource("productNew", {path: "products/new"} );
+    this.resource("productEdit", { path: ":product_id"} );
+    this.resource("productNew", { path: "products/new"} );
+    this.resource('manageOrders', { path: 'manageOrders'} );
   });
 });

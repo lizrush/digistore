@@ -1,6 +1,6 @@
 App.AdminRoute = Ember.Route.extend({
   model: function(){
-    return this.store.find('product')
+    return { products: this.store.find('product'), orders: this.store.find('order') }
   },
 
   actions: {

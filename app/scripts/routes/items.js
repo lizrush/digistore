@@ -24,7 +24,7 @@ App.ItemsRoute = Ember.Route.extend({
         order.set('total', '10000');
         order.save().then(
           function(order){
-            self.transitionTo("order", order)
+            self.transitionTo('order', order)
           },
           function(error){
             console.log('it didnt work');
