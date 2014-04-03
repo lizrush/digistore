@@ -22,4 +22,4 @@ To start the serve, run:
 grunt serve
 ```
 
-Fidnd the app at http://localhost:9000.
+Find the app at http://localhost:9000.
