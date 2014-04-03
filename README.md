@@ -1,6 +1,7 @@
-To run:
+To get this app up and running, first clone the repo into your favorite directory:
+
 ```bash
-git clone com/lizrush/digistore
+git clone https://github.com/lizrush/digistore.git
 ```
 
 Now, navigate into the directory into which you cloned the repo:
