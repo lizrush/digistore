@@ -242,7 +242,7 @@ function program5(depth0,data) {
   data.buffer.push(escapeExpression((helper = helpers['format-money'] || (depth0 && depth0['format-money']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "controller.cartTotal", options) : helperMissing.call(depth0, "format-money", "controller.cartTotal", options))));
   data.buffer.push(" </strong></td>\n          <td><button class=\"btn btn-primary\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push("> Checkout </button></td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</div>\n\n");
+  data.buffer.push("> Checkout </button></td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n\n\n");
   stack1 = helpers['if'].call(depth0, "checkout", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</div>\n");
